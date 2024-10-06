@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#game {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-gap: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.line {
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.line.horizontal {
+    width: 40px;
+    height: 6px;
+    margin: 2px 0;
+}
+
+.line.vertical {
+    width: 6px;
+    height: 40px;
+    margin: 0 2px;
+}
+
+.line.taken {
+    background-color: #333;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.box.player1 {
+    background-color: #3498db;
+}
+
+.box.player2 {
+    background-color: #e74c3c;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+#scores span {
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#playerTurn {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#player1 {
+    color: #3498db;
+}
+
+#player2 {
+    color: #e74c3c;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.point-change {
+    animation: pointChange 0.5s ease;
+}
+
+@keyframes pointChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
